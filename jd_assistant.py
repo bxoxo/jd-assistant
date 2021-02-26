@@ -1358,6 +1358,7 @@ class Assistant(object):
         t.start()
 
         self.add_item_to_cart(sku_ids={sku_id: num})
+        self.get_checkout_page_detail()
 
         for count in range(1, retry + 1):
             logger.info('第[%s/%s]次尝试提交订单', count, retry)
